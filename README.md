@@ -1,69 +1,156 @@
-# Control Escolar Proyecto
+# 🎓 Control Escolar - Sistema Académico
 
-### Generalidades
-
-Bienvenido al proyecto de Control Escolar, con motivos de aprendizaje me tomé la libertad de decidir como escribir este archivo _README.md_ para futuros becarios, por lo que a continuación, escribiré lo restante en inglés, toma en cuenta que siempre está la posibilidad de utilizar un traductor para entenderlo mejor.
-
-### About project
-
-This is a project focused on 4 programs from _Agenda Ambiental_, which is and academic area, there are many roles to evaluate where a view will be at the moment, so this could be change in a future, it it is, read all documentation in here.
-
-### How do I install project?
-
-This is very important, because in my experience was very hard to install, if you have any problems installing it, ask the last _becario_ they could be helpful for you.
-
-Therefore I will explain what I have to do, when I was installing it.
-
-Firs of all, you need to install all dependencies needed, as NodeJS, Laravel, \* _Laragon_ \*, MySQL, if you are managing Linux, I recommend you to install nvm for Nodejs installation.
-
-Notes:
-
-    * Laragon installs all necesarily dependencias except for node and git.
-
-    * It is important to install php 7.4.* where * is whatever subversion, but I recommend 33 so you should be working on php 7.4.33
-
-You see Laragon could be optional, this is because, this project doesn't need necessarily Laragon, just because we only need artisan serve to run project to work local, I only used it for working on Windows because we need to use unix commands and obviusly git, and database. I assume, you know how to install this dependencies so if you are not, prepare yourself to self-learning.
-
-Once, you have installed all dependencies, next step is to run next commands on your terminal with project folder opened in terminal:
-
-1.  composer update ( _alternatively_: composer install )
-2.  php --ini
-3.  npm install
-4.  php artisan storage:link
-
-    **Extra:**
-
-        You need to configure your .env, it is important because it contains all credential needed for working, nevertheless I will try to let you as complete as possible, but remember to work in database you should have tables within names inside this document.
-
-5.  php artisan key:generate
+Sistema web desarrollado para la gestión de procesos académicos y administrativos dentro de instituciones educativas. Este proyecto integra **Laravel (backend)** y **Vue.js (frontend)** para ofrecer una experiencia moderna, dinámica y escalable.
 
 ---
 
-**Optional**
+## 📌 Descripción
 
-You can also migrate database from seeds using:
+**Control Escolar** es una plataforma diseñada para centralizar la administración educativa, permitiendo gestionar alumnos, docentes, programas académicos y evaluaciones de manera eficiente.
 
-- php artisan migrate --seed
-- php artisan migrate:fresh --seed
+El sistema está enfocado en proyectos académicos como los pertenecientes a **Agenda Ambiental**, considerando múltiples roles de usuario y vistas dinámicas según permisos.
 
 ---
 
-_Note: This could be working on all projects which use Laravel_
+## 🚀 Características
 
-### Running _This_ Project
+- 📋 Gestión de alumnos
+- 👨‍🏫 Administración de docentes
+- 📚 Control de programas académicos
+- 🧾 Evaluaciones y seguimiento académico
+- 🔐 Sistema de autenticación y roles
+- 🔍 Búsqueda y filtrado dinámico
+- ⚡ Interfaz reactiva con Vue.js
+- 📊 Panel administrativo
 
-I need to emphasize on **this** beacause, this extra steps, works only on Laravel-vue project
+---
 
-**Run next commands**
+## 🛠️ Tecnologías utilizadas
 
-- npm run watch
-- php artisan serve
+### Backend
+- **Laravel** → Framework PHP
+- **PHP 7.4+** → Lógica del servidor
+- **MySQL** → Base de datos
 
-1. php artisan optimize
-2. composer dump-autoload
+### Frontend
+- **Vue.js** → Interfaz reactiva
+- **JavaScript (ES6+)** → Funcionalidad
+- **HTML5 & CSS3** → Estructura y estilos
 
-You will notice that I write two different lists, this is because, the numbered list it is needed to do in that way.
+### Herramientas
+- **Node.js & NPM**
+- **Composer**
+- **Git**
 
-I suddenly encourage you to do the most long processes which is first the numbered list in that order and simultaneously run the npm command, so this will start running your project as fast as can your computer.
+---
 
-If you have done this steps as I was commenting you, you can start working very easily.
+## 📂 Estructura del proyecto
+
+
+📁 control-escolar
+├── 📁 app
+│ ├── 📁 Models
+│ ├── 📁 Http/Controllers
+├── 📁 resources
+│ ├── 📁 js (Vue components)
+│ ├── 📁 views
+├── 📁 routes
+│ └── web.php
+├── 📁 public
+├── 📁 database
+│ ├── 📁 migrations
+│ ├── 📁 seeders
+└── README.md
+
+
+---
+
+## ⚙️ Requisitos
+
+Antes de instalar el proyecto, asegúrate de tener:
+
+- Node.js (recomendado con NVM)
+- Composer
+- PHP 7.4.x
+- MySQL
+- Git
+
+> 💡 Opcional: Laragon (facilita el entorno en Windows)
+
+---
+
+## 🔧 Instalación
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/tuusuario/control-escolar.git
+```
+Entrar al proyecto:
+```
+cd control-escolar
+```
+Instalar dependencias de backend:
+```
+composer install
+```
+Instalar dependencias de frontend:
+```
+npm install
+```
+Configurar entorno:
+```
+cp .env.example .env
+```
+Generar clave:
+```
+php artisan key:generate
+```
+Configurar base de datos en .env
+Ejecutar migraciones:
+```
+php artisan migrate --seed
+```
+Crear enlace de storage:
+```
+php artisan storage:link
+```
+## ▶️ Ejecución del proyecto
+
+Ejecuta ambos procesos:
+```
+npm run dev
+php artisan serve
+```
+El sistema estará disponible en:
+```
+http://127.0.0.1:8000
+```
+---
+## 💡 Notas importantes
+Asegúrate de tener correctamente configurado el archivo .env
+Si hay errores de dependencias:
+composer dump-autoload
+php artisan optimize
+Para reiniciar base de datos:
+php artisan migrate:fresh --seed
+---
+## 🎨 Interfaz
+
+- UI moderna basada en componentes Vue
+- Navegación dinámica sin recargas
+- Experiencia de usuario fluida
+---
+## 📈 Mejoras futuras
+- 📱 Versión móvil (PWA)
+- 🔔 Notificaciones en tiempo real
+- 📊 Reportes avanzados
+- 🧑‍💻 Sistema de permisos más robusto
+- ☁️ Integración con servicios cloud
+---
+## 👨‍💻 Autor
+
+Desarrollado por Isai Reyes Peña
+---
+## 📄 Licencia
+
+MIT.
