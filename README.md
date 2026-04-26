@@ -46,7 +46,7 @@ El sistema está enfocado en proyectos académicos como los pertenecientes a **A
 
 ## 📂 Estructura del proyecto
 
-
+```
 📁 control-escolar
 ├── 📁 app
 │ ├── 📁 Models
@@ -61,7 +61,7 @@ El sistema está enfocado en proyectos académicos como los pertenecientes a **A
 │ ├── 📁 migrations
 │ ├── 📁 seeders
 └── README.md
-
+```
 
 ---
 
